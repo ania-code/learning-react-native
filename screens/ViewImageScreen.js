@@ -1,32 +1,49 @@
 import React from 'react';
-import { View, ImageBackground, Text, StyleSheet } from 'react-native'
+import { View, StyleSheet, Image } from 'react-native'
 import chair from '../assets/chair.jpg'
 
 export default function ViewImageScreen() {
 
     return(
         <View style={styles.container}>
-            <View style={{flex: 1, flexDirection: "row", justifyContent: "space-between", marginTop: 40, marginHorizontal: 30}}>
-                <View style={{ width: 50, height:50, backgroundColor: "#fc5c65"}}></View>
-                <View style={{  width: 50, height:50, backgroundColor: "#4ECDC4"}}></View>
-            </View>
-            <ImageBackground
-                style={styles.backgroundImage}
-                source={chair}></ImageBackground>
+            <View style={styles.closeIcon}></View>
+            <View style={styles.deleteIcon}></View>
+            <Image 
+                resizeMode="contain"
+                source={chair}
+                style={styles.backgroundImage}> 
+            </Image>
         </View>
+        
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex:1,
-        marginHorizontal: 10
+        backgroundColor: '#000',
+        flex:1
+    },
+    closeIcon: {
+        width: 50,
+        height:50,
+        backgroundColor: '#fc5c65',
+        position:'absolute',
+        top: 40,
+        left: 40
+    },
+    deleteIcon: {
+        width: 50,
+        height:50,
+        backgroundColor: '#4ECDC4',
+        position:'absolute',
+        top: 40,
+        right: 40
     },
     backgroundImage: {
-        flex:2,
-        flexDirection: "column",
-        width: "100%",
-        height: 560,
-        marginBottom: 400
+        width: '100%',
+        height: '100%'
     }
 })
+
+// KOCHAM MOJĄ ANIĘ
+// JESTEM Z NIEJ MEGA DUMNY
