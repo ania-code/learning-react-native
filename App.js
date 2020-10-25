@@ -1,18 +1,34 @@
-import React from "react";
-import { View, SafeAreaView, StyleSheet, Text, Button } from "react-native";
-import WelcomeScreen from "./screens/WelcomeScreen"
+import React from 'react'
+import { View } from 'react-native'
+import CardComponent from './components/CardComponent'
 
 export default function App() {
-  return (
-    <WelcomeScreen></WelcomeScreen>
-
-  )
+  return <View style={{
+              backgroundColor: '#f8f4f4',
+              padding: 20,
+              paddingTop: 100,
+          }}>
+          <CardComponent 
+            title="Red jacket for sale"
+            subTitle="100$"
+            image={require('./assets/jacket.jpg')} />
+    </View>
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-});
+// import React from "react";
+// import { StyleSheet } from "react-native";
+// import WelcomeScreen from "./screens/WelcomeScreen"
+
+// export default function App() {
+//   return (
+//     <WelcomeScreen></WelcomeScreen>
+//   )
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     justifyContent: 'center',
+//     alignItems: 'center'
+//   },
+// });
