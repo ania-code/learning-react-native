@@ -1,18 +1,11 @@
 import React from 'react'
-import { View } from 'react-native'
-import CardComponent from './components/CardComponent'
+import MessagesScreens from './screens/MessagesScreens'
+import ViewImageScreen from './screens/ViewImageScreen'
 
 export default function App() {
-  return <View style={{
-              backgroundColor: '#f8f4f4',
-              padding: 20,
-              paddingTop: 100,
-          }}>
-          <CardComponent 
-            title="Red jacket for sale"
-            subTitle="100$"
-            image={require('./assets/jacket.jpg')} />
-    </View>
+  return(
+    <MessagesScreens/>
+  )
 }
 
 // import React from "react";
